@@ -24,6 +24,8 @@ These can (and should, often) be run to fix coding style errors.
 make lint
 ```
 
+> **NOTE:** There are some who believe that you shouldn't touch the formatting of somebody else's code. For SimplePie NG, that thinking should be _rejected_. Conform to the linter rules _at all times_. The linter definitions will be updated from time-to-time, and all existing code will be updated to fit the new linter definitions.
+
 ## Guidelines
 
 ### Naming Things
