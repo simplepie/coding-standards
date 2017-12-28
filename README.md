@@ -1,4 +1,4 @@
-# PHP Coding Standards
+# SimplePie NG Coding Standards
 
 PSR-1/2/4/5/12 are a solid foundation, but are not an entire coding style by themselves.
 
