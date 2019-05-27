@@ -1,4 +1,8 @@
-# SimplePie NG Coding Standards
+<div align="center"><img src="https://raw.githubusercontent.com/simplepie/.github/master/logo.png" width="500"><br></div>
+
+----
+
+# Coding Standards
 
 PSR-1/2/4/5/12/19 are a solid foundation, but are not an entire coding style by themselves.
 
