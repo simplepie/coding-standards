@@ -6,9 +6,10 @@ This guide goes well-beyond brace placement and tabs vs. spaces to cover topics 
 
 * [PSR-1] — Basic Coding Style
 * [PSR-2] — Coding Style Guide
-* [PSR-4] — Autoloading Patterns
-* [PSR-5] — Documentation Block Patterns
+* [PSR-4] — Autoloading
+* [PSR-5] — PHPDoc
 * [PSR-12] — Extended Coding Style
+* [PSR-19] — PHPDoc tags
 * [Symfony] — Additional Standards.
 
 ## Enforced by Code
@@ -104,7 +105,7 @@ make lint
 
 1. Any _short-hand_ refrences to software licenses should use the [SPDX identifier](https://spdx.org/licenses/).
 
-1. Data types (if they are classes) can either be fully-qualified, or can match a valid namespace alias.
+1. Data types (if they are classes) should match a valid namespace alias (if `use`d), or a fully-qualified class name if the class has not been imported.
 
    ```php
    /**
@@ -131,6 +132,8 @@ make lint
        return $this->dispatcher;
    }
    ```
+   
+   Using the `/** @var Type */` annotation is _allowed_, but only if it provides context where standard type hinting and return types do not.
 
 ### Spelling
 
@@ -183,7 +186,7 @@ Never use the following features of PHP. The world will come to an end if you do
 
 ### Miscellaneous
 
-* No global variables. (ಠ_ಠ)
+* No global variables.
 
 * Code must not produce any warnings or errors when PHP's error reporting level is set to `error_reporting(-1)`. ([Source](https://twitter.com/rasmus/status/7448448829))
 
@@ -205,11 +208,12 @@ My intention is to release all rights to this documentation and make it availabl
 
 To the extent possible under law, the AUTHOR has waived all copyright and related or neighboring rights to "PHP Coding Standards". This work is published from: <span property="vcard:Country" datatype="dct:ISO3166" content="US">United States</span>.
 
-  [PSR-1]: http://www.php-fig.org/psr/psr-1/
-  [PSR-2]: http://www.php-fig.org/psr/psr-2/
-  [PSR-4]: http://www.php-fig.org/psr/psr-4/
-  [PSR-5]: https://github.com/phpDocumentor/fig-standards/blob/master/proposed/phpdoc.md
+  [PSR-1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
+  [PSR-2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
+  [PSR-4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
+  [PSR-5]: https://github.com/php-fig/fig-standards/blob/master/proposed/phpdoc.md
   [PSR-12]: https://github.com/php-fig/fig-standards/blob/master/proposed/extended-coding-style-guide.md
+  [PSR-19]: https://github.com/php-fig/fig-standards/blob/master/proposed/phpdoc-tags.md
   [Symfony]: https://symfony.com/doc/current/contributing/code/standards.html
   [PHP Code Sniffer]: https://github.com/squizlabs/PHP_CodeSniffer
   [PHP CS Fixer]: http://cs.sensiolabs.org
